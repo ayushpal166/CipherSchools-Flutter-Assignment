@@ -58,6 +58,7 @@ class _ExpenseScreenState extends State<ExpenseScreen> {
     descriptionController.clear();
 
     // Navigate back to the home screen
+    Navigator.pop(context);
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(builder: (context) => const Home()),

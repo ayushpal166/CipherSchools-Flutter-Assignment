@@ -54,6 +54,7 @@ class _IncomeScreenState extends State<IncomeScreen> {
       });
 
       if (mounted) {
+        Navigator.pop(context);
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(builder: (context) => const Home()),
