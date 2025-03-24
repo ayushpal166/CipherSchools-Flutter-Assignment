@@ -1,16 +1,29 @@
-# cipher_assignment
+# 🚀 CipherSchools Flutter Assignment – Expense Tracker  
 
-A new Flutter project.
+## 🌟 Introduction  
+A simple and scalable **Expense Tracking App** built using **Flutter** and **Firebase**. The app allows users to manage expenses, view financial insights, and track spending habits over time.  
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🚀 Features  
+✅ **Google Authentication** – Sign up and log in using Google.  
+✅ **Add and Delete Expenses** – Easily manage your expenses.  
+✅ **Categorization of Expenses** – Group expenses by category (e.g., food, travel, shopping).  
+✅ **Income and Expense Summary** – Track total income and expenses at a glance.  
+✅ **Local Storage (Hive)** – Offline support with data persistence.  
+✅ **Logout and Auto-login** – Secure authentication with session management.  
+✅ **Pie Chart Insights** – Visualize spending patterns with dynamic charts.  
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🛠️ Tech Stack  
+| Technology | Description |
+|-----------|-------------|
+| **Flutter** | Frontend framework for building natively compiled applications. |
+| **Firebase** | Backend-as-a-service for authentication and data storage. |
+| **Hive** | Lightweight and fast NoSQL database for local storage. |
+| **Provider** | State management library for managing app state efficiently. |  
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+Download APK : https://drive.google.com/file/d/1dnDP43hM3Oxangcm0Zif10RACHYgEwlO/view?usp=sharing
