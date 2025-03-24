@@ -169,24 +169,27 @@ class _IncomeScreenState extends State<IncomeScreen> {
                       controller: _descriptionController,
                       keyboardType: TextInputType.text,
                       enabled: true,
+
                       decoration: InputDecoration(
                         labelText: "Description",
-
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(12),
-                          borderSide: BorderSide(
-                            color: const Color(0xff545456),
-                            width: 1,
+                        labelStyle: TextStyle(color: textColor),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(8),
+                          borderSide: const BorderSide(
+                            width: 3,
+                            color: textFieldColor,
                           ),
                         ),
+
                         contentPadding: const EdgeInsets.symmetric(
                           horizontal: 12,
                           vertical: 16,
                         ),
                       ),
                       validator: (value) {
-                        if (value == null || value.isEmpty)
+                        if (value == null || value.isEmpty) {
                           return 'Enter description';
+                        }
                         return null;
                       },
                     ),

@@ -95,7 +95,7 @@ class _ExpenseScreenState extends State<ExpenseScreen> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const SizedBox(height: 100),
+          const SizedBox(height: 60),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
             child: Text(
@@ -141,70 +141,67 @@ class _ExpenseScreenState extends State<ExpenseScreen> {
                   topRight: Radius.circular(32),
                 ),
               ),
-              child: SingleChildScrollView(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 24,
-                  horizontal: 16,
-                ),
-                child: Column(
-                  children: [
-                    CustomExpandableDropdown(
-                      hintText: "Category",
-                      items: Constants.categories,
-                      selectedValue: selectedCategory,
-                      onItemSelected: (value) {
-                        setState(() {
-                          selectedCategory = value;
-                        });
-                      },
-                    ),
-                    const SizedBox(height: 16),
-                    TextFormField(
-                      controller: descriptionController,
-                      keyboardType: TextInputType.text,
-                      validator: (val) {
-                        if (val == null || val.isEmpty) {
-                          return "Enter Description";
-                        }
-                        return null;
-                      },
-                      decoration: InputDecoration(
-                        labelText: "Description",
-
-                        hintStyle: const TextStyle(fontSize: 16),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(8),
-                          borderSide: const BorderSide(
-                            width: 3,
-                            color: textFieldColor,
-                          ),
-                        ),
-                        contentPadding: const EdgeInsets.symmetric(
-                          horizontal: 12,
-                          vertical: 8,
+              padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 16),
+              child: Column(
+                children: [
+                  CustomExpandableDropdown(
+                    hintText: "Category",
+                    items: Constants.categories,
+                    selectedValue: selectedCategory,
+                    onItemSelected: (value) {
+                      setState(() {
+                        selectedCategory = value;
+                      });
+                    },
+                  ),
+                  const SizedBox(height: 16),
+                  TextFormField(
+                    controller: descriptionController,
+                    keyboardType: TextInputType.text,
+                    validator: (val) {
+                      if (val == null || val.isEmpty) {
+                        return "Enter Description";
+                      }
+                      return null;
+                    },
+                    decoration: InputDecoration(
+                      labelText: "Description",
+                      labelStyle: const TextStyle(
+                        fontSize: 16,
+                        color: textColor,
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8),
+                        borderSide: const BorderSide(
+                          width: 3,
+                          color: textFieldColor,
                         ),
                       ),
-                      style: const TextStyle(fontSize: 16),
-                      maxLines: 1,
+                      contentPadding: const EdgeInsets.symmetric(
+                        horizontal: 12,
+                        vertical: 16,
+                      ),
                     ),
-                    const SizedBox(height: 16),
-                    CustomExpandableDropdown(
-                      hintText: "Wallet",
-                      items: Constants.paymentMethods,
-                      selectedValue: selectedWallet,
-                      onItemSelected: (value) {
-                        setState(() {
-                          selectedWallet = value;
-                        });
-                      },
-                    ),
-                    const SizedBox(height: 210),
-                    Container(height: 2, color: primaryColor),
-                    const SizedBox(height: 20),
-                    CustomButton(text: 'Continue', onPressed: _saveExpenseData),
-                    const SizedBox(height: 16),
-                  ],
-                ),
+                    style: const TextStyle(fontSize: 16),
+                    maxLines: 1,
+                  ),
+                  const SizedBox(height: 16),
+                  CustomExpandableDropdown(
+                    hintText: "Wallet",
+                    items: Constants.paymentMethods,
+                    selectedValue: selectedWallet,
+                    onItemSelected: (value) {
+                      setState(() {
+                        selectedWallet = value;
+                      });
+                    },
+                  ),
+                  const Spacer(),
+                  Container(height: 2, color: primaryColor),
+                  const SizedBox(height: 20),
+                  CustomButton(text: 'Continue', onPressed: _saveExpenseData),
+                  const SizedBox(height: 16),
+                ],
               ),
             ),
           ),
